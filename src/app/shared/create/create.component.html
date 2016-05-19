@@ -1,0 +1,14 @@
+
+<div class="row">
+  <form>
+  <div class="medium-10 columns">   
+    <label>   
+      <input type="text" placeholder="Task" required [(ngModel)]="title" >
+      </label>      
+  </div>
+  <div class="medium-2 columns">      
+      <button type="submit" class="button" (click)="OnAddTask(title)">Add Task</button>      
+  </div>
+  </form>
+</div>
+
