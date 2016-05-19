@@ -1,5 +1,0 @@
-{
-  "proxy": "http://eisam:123@172.16.1.5:80",
-  "https-proxy": "http://eisam:123@172.16.1.5:80",
-  "strict-ssl": false
-}
