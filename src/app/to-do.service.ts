@@ -5,10 +5,16 @@ import { Task } from './task';
 export class ToDoService {
   tasks: Task[] = [];
   constructor() {
-    console.log('Running Service constuctor...'); 
+    
   }
   addTask(task: Task) {
     this.tasks.push(task)
+  }
+  removeTask(task:Task) {
+    var pos = this.tasks.indexOf(task);
+    if(pos > -1) {
+      this.tasks.splice(pos,1);
+    }
   }
   getTasks() {
     return this.tasks;

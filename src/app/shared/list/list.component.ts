@@ -8,15 +8,18 @@ import { ToDoService } from '../../to-do.service';
   styleUrls: ['list.component.css']  
 })
 export class ListComponent implements OnInit {
-
+  
   constructor(private service:ToDoService ) {}
 
   ngOnInit() {
   }
   
-  GetTasks() {
-    console.log('Inside get tasks...');
+  GetTasks() {    
     return this.service.getTasks();
+  }
+  
+  OnTaskDelete(task:Task) {
+    this.service.removeTask(task);
   }
 
 }

@@ -1,10 +1,19 @@
-<div class="callout alert" *ngIf="GetTasks() == 0">
+<div class="callout alert" *ngIf="service.getTasks() == 0">
   It's empty there.. add some tasks!
 </div>
 <ul class="task-list">
- <li *ngFor="let task of GetTasks()" class="task-item">
+ <li *ngFor="let task of service.getTasks(); let idx=index" class="task-item">
    <div class="callout secondary">
-      {{task.title}}
+     <div class="switch small task-done-switch">
+      <input class="switch-input" id="task{{idx}}" type="checkbox" name="exampleSwitch" [(ngModel)]="task.done">
+      <label class="switch-paddle" attr.for="task{{idx}}">
+        <span class="show-for-sr">Task done?</span>
+        <span class="switch-active" aria-hidden="true">Yes</span>
+        <span class="switch-inactive" aria-hidden="true">No</span>
+      </label>
+    </div>      
+    <span class="task-title">{{task.title}}</span>
+    <span class="float-right"> <i class="fa fa-times fa-2x alert" (click)="OnTaskDelete(task)"></i> </span>      
    </div>
  </li>
 </ul>

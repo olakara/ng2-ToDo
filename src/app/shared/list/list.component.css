@@ -4,3 +4,10 @@
 .task-item {
     list-style: none;
 }
+.task-title {
+    margin-left: 20px;        
+}
+
+.task-done-switch {
+    display: inline;
+}

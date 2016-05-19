@@ -10,16 +10,15 @@ import { ToDoService } from '../../to-do.service';
   styleUrls: ['create.component.css'] 
 })
 export class CreateComponent implements OnInit {
-  title:string;
+  title:string; 
   constructor(private service:ToDoService ) {}
   
-  ngOnInit() {
+  ngOnInit() {   
     
   }
   
-  OnAddTask() {    
+  OnAddTask(taskInput) {  
     
-    console.log(this.title);
     var task = new Task();
     
     task.title = this.title;
@@ -27,6 +26,8 @@ export class CreateComponent implements OnInit {
     
     this.service.addTask(task);
     this.title = '';
+    
+    taskInput.focus();
   }
 
 }

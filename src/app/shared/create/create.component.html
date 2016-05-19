@@ -3,13 +3,16 @@
   <form novalidate="">
   <div class="medium-10 columns">   
     <label>   
-      <input type="text" placeholder="Task" required [(ngModel)]="title" >
+      <input #taskInput type="text" placeholder="Task" required [(ngModel)]="title" />
       </label>      
   </div>
   <div class="medium-2 columns">
-    <button type="submit" class="button" (click)="OnAddTask(title)"> <i class="fa fa-plus" aria-hidden="true"></i> Add Task</button>   
-    <button type="button" class="button secondary disabled " ><i class="fa fa-cogs" aria-hidden="true"></i></button>      
-         
+    <button type="submit" class="button" [class.disabled]="!title" (click)="OnAddTask(taskInput)"> 
+      <i class="fa fa-plus" aria-hidden="true"></i> Add Task
+    </button>   
+    <button type="button" class="button secondary" [class.disabled]="!title" >
+      <i class="fa fa-cogs" aria-hidden="true"></i>
+    </button>              
   </div>
   </form>
 </div>
