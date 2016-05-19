@@ -1,13 +1,25 @@
 .task-list {
-    margin-left: 0px;
+    margin-left: 0;
 }
 .task-item {
     list-style: none;
 }
 .task-title {
-    margin-left: 20px;        
+    margin-left: 20px;
 }
 
 .task-done-switch {
     display: inline;
+}
+
+input:checked ~ .switch-paddle{
+  background: #3adb76 !important;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.red-text {
+  color: #ec5840;
 }
