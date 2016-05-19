@@ -5,7 +5,7 @@ import { Task } from './task';
 export class ToDoService {
   tasks: Task[] = [];
   constructor() {
-    this.tasks = []; 
+    console.log('Running Service constuctor...'); 
   }
   addTask(task: Task) {
     this.tasks.push(task)

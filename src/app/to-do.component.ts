@@ -9,7 +9,8 @@ import { ToDoService } from './to-do.service';
   selector: 'to-do-app',
   templateUrl: 'to-do.component.html',
   styleUrls: ['to-do.component.css'],
-  directives: [ NavigationComponent, CreateComponent, ListComponent]
+  directives: [ NavigationComponent, CreateComponent, ListComponent],
+  providers: [ToDoService] 
 })
 export class ToDoAppComponent {
   title = 'To Do';

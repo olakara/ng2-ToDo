@@ -7,8 +7,7 @@ import { ToDoService } from '../../to-do.service';
   moduleId: module.id,
   selector: 'app-create',
   templateUrl: 'create.component.html',
-  styleUrls: ['create.component.css'] ,
-  providers: [ToDoService] 
+  styleUrls: ['create.component.css'] 
 })
 export class CreateComponent implements OnInit {
   title:string;

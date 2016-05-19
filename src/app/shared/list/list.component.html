@@ -1,3 +1,10 @@
-<ul>
- <li ngR></li>
+<div class="callout alert" *ngIf="GetTasks() == 0">
+  It's empty there.. add some tasks!
+</div>
+<ul class="task-list">
+ <li *ngFor="let task of GetTasks()" class="task-item">
+   <div class="callout secondary">
+      {{task.title}}
+   </div>
+ </li>
 </ul>
